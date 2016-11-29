@@ -45,9 +45,10 @@ function saveList(){
 
 function clearList(){
   document.getElementById("listDisplay").innerHTML = " ";
-  for(var i = 0; i < myList.length; i++){
-        delete myList[i];
-   }
+  while(myList.length){  
+    myList.pop();  
+    }  
+    //console.log(myList);
 }
 
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
