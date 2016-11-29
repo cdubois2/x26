@@ -40,10 +40,15 @@ function addItem(){
 
 function saveList(){
     var tempSave = myList.toString();
-    //console.log(tempSave);
     setCookie("tempCook",tempSave,1);
 }
 
+function clearList(){
+  document.getElementById("listDisplay").innerHTML = " ";
+  for(var i = 0; i < myList.length; i++){
+        delete myList[i];
+   }
+}
 
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
